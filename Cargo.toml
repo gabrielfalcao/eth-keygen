@@ -1,0 +1,22 @@
+[package]
+name = "eth-keygen"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+hex = "0.4.3"
+rand_jitter = { version = "0.4.0", features = ["std"] }
+secp256k1 = { version = "0.28.2", features = ["rand", "std", "rand-std", "serde"] }
+tiny-keccak = { version = "1.5" }
+web3 = "0.19.0"
+
+
+[[bin]]
+name = "eth-keygen"
+path = "src/main.rs"
+bench = false
+
+[lib]
+name = "eth_keygen"
+path = "src/lib.rs"
